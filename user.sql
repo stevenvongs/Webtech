@@ -1,3 +1,4 @@
+CREATE DATABASE UserName;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `FullName` varchar(100) DEFAULT NULL,
