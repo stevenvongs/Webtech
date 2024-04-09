@@ -7,7 +7,7 @@ CREATE DATABASE UserName;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `FullName` varchar(100) DEFAULT NULL,
-  `AdminEmail` varchar(120) DEFAULT NULL,
+  `UserEmail` varchar(120) DEFAULT NULL,
   `UserName` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL,
   `updationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
