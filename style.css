@@ -1,0 +1,40 @@
+
+body {
+    background-color: lavenderBlush;
+    font-family: baskerville, serif;
+}
+
+/* Tables */
+th {
+    background-color: pink;
+    color: white;
+}
+
+td {
+        background-color: snow;
+}
+
+/* Navigation Bar*/
+.navBar {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+    background-color: pink;
+}
+
+.navBarList {
+ 	float: left;
+}
+
+.navBarElement {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: lightPink;
+}
