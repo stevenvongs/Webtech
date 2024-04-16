@@ -13,4 +13,9 @@
       <li class="navBarListLog"><a class="navBarElement" href="library.php" target="_self">Log Out</a></li>
 		</ul>
 	</body>
+  <!--
+    When logged in, use user ID to display checked out books
+    be able display when checked out
+    return book button
+   -->
 </html>
