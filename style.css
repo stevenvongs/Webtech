@@ -1,0 +1,106 @@
+<<<<<<< Updated upstream
+=======
+body {
+    background-color: white;
+    font-family: baskerville, serif;
+}
+
+.titleLogin {
+    font-size: 100px;
+    color: slateblue;
+    text-align: center;
+}
+
+.title {
+    font-size: 75px;
+    color: slateblue;
+    text-align: center;
+}
+
+.welcome {
+    text-align: center;
+    color: mediumslateblue;
+
+}
+
+.login {
+    margin: auto;
+    background-color: lavender;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+}
+
+.login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login a {
+    text-align: center;
+    text-decoration: none;
+}
+.login input[type="submit"] {
+    background-color: slateblue;
+    color: white;
+    cursor: pointer;
+}
+.login input[type="submit"]:hover {
+    background-color: darkslateblue;
+}
+
+/* Tables */
+th {
+    background-color: pink;
+    color: white;
+}
+
+td {
+        background-color: snow;
+}
+
+/* Navigation Bar*/
+.navBar {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+    background-color: lavender;
+}
+
+.navBarList {
+ 	float: left;
+}
+
+.navBarListLog a:hover {
+    background-color: darkslateblue;
+    color: white;
+}
+.navBarElement {
+    display: block;
+    color: darkslateblue;
+    text-align: center;
+    font-size: 25px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navBarListLog {
+    float: right;
+}
+.navBarList a:hover {
+    background-color: mediumslateblue;
+    color: white;
+}
+>>>>>>> Stashed changes
