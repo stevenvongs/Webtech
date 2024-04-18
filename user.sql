@@ -4,6 +4,7 @@ CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `UserName` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL,
+  );
 
 --
 -- Dumping data for table `user`
