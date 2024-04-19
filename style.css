@@ -7,6 +7,7 @@ body {
     font-size: 100px;
     color: slateblue;
     text-align: center;
+    margin-left: 100px;
 }
 
 .title {
@@ -18,7 +19,7 @@ body {
 .welcome {
     text-align: center;
     color: mediumslateblue;
-
+    padding: 20px;
 }
 
 .login {
@@ -101,4 +102,20 @@ td {
     background-color: mediumslateblue;
     color: white;
 }
+
+.dropdown {
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+}
+
+#drop {
+    background-color: slateblue;
+    border: none;
+}
+
+#drop:hover {
+    background-color: darkslateblue; /* Change this to the desired hover color */
+  }
+
 
