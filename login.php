@@ -35,66 +35,36 @@
         <p class="error">Invalid username or password. Please try again.</p>
     <?php endif; ?>
    
-
     <?php
-
-  
-
     // Create connection
-    $conn = new mysqli("localhost", "root", "", "username");
+    $conn = new mysqli("localhost", "root", "", "library_database");
 
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
-    /* else {
-        echo "Success!";
-    } */
-
     // Get username and password from the form
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
         // get username and passwrod from form
         $email = $_POST['username'];
         $password = $_POST['password'];
 
         // Process the form data (e.g., save to database, send email, etc.)
-        // For demonstration purposes, we'll just echo the submitted data
-
-        $sql = "SELECT * FROM userInfo WHERE email ='$email' AND pwd='$password'";
+        $sql = "SELECT * FROM user_info WHERE user_email ='$email' AND user_pwd='$password'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             // User exists, authentication successful
             $authenticated = true;
             header("Location: dashboard.html");
-            
-
         } else {
             // User does not exist or incorrect credentials
             $authenticated = false;
             header("Location: login.php?error=1");
         }
-
     }
-
-
-
-
     // Close database connection
     $conn->close();
-    
     ?>
-
-
   </body>
 </html>
-
-
-
-
-
-<?php
-
-
