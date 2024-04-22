@@ -22,10 +22,9 @@ CREATE TABLE IF NOT EXISTS `admin` (
 );
 
 CREATE TABLE IF NOT EXISTS `user_info` (
-  `user_id` int(10) DEFAULT NULL,
+  `user_id` INT AUTO_INCREMENT PRIMARY KEY,
   `user_email` varchar(255) DEFAULT NULL,
   `user_pwd` varchar(255) NOT NULL,
-  PRIMARY KEY (`user_id`)
 );
 
 CREATE TABLE IF NOT EXISTS `book` (
