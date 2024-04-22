@@ -56,7 +56,9 @@
         if ($result->num_rows > 0) {
             // User exists, authentication successful
             $authenticated = true;
-            header("Location: dashboard.html");
+            session_start();
+            $_SESSION['username'] = $email;
+            header("Location: dashboard.php");
         } else {
             // User does not exist or incorrect credentials
             $authenticated = false;
