@@ -48,6 +48,15 @@ CREATE TABLE IF NOT EXISTS `book_issue` (
     PRIMARY KEY (`issue_id`)
 );
 
+-- A table to store book requests
+CREATE TABLE IF NOT EXISTS `requests` (
+    `book_id` int(10) NOT NULL,
+    `book_author` VARCHAR(255) NOT NULL,
+    `book_title` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`book_id`)
+);
+
+
 INSERT INTO `admin` (`admin_id`, `admin_email`, `admin_pwd`) VALUES
 (1, 'admin', 'admin');
 
