@@ -11,6 +11,7 @@
     <ul class="navBar">
       <li class="navBarList"><a class="navBarElement" href="dashboard.php" target="_self">Dashboard</a></li>
   		<li class="navBarList"><a class="navBarElement" href="library.php" target="_self">Library</a></li>
+      <li class="navBarList"><a class="navBarElement" href="request.php" target="_self">Request</a></li>
       <li class="navBarListLog"><a class="navBarElement" href="library.php" target="_self">Log Out</a></li>
 		</ul>
 	</body>
