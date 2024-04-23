@@ -2,7 +2,7 @@
 
 body {
     background-color: white;
-    font-family: baskerville, serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .titleLogin {
@@ -136,7 +136,7 @@ td {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 25px;
+    margin: 50px 15% 25px 18%;
 }
 
 .bookCard {
