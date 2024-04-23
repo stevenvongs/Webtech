@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `user_info` (
 );
 
 CREATE TABLE IF NOT EXISTS `book` (
-    `book_id` int(10) NOT NULL,
+    `book_id` int(10) NOT NULL AUTO_INCREMENT,
     `book_title` varchar(255) NOT NULL,
     `book_author` varchar(255) NOT NULL,
     `book_description` varchar(1027),
@@ -40,11 +40,11 @@ CREATE TABLE IF NOT EXISTS `book` (
 
 CREATE TABLE IF NOT EXISTS `book_issue` (
     `book_id` int(10) NOT NULL,
-    `issue_id` int(10) NOT NULL,
+    `issue_id` int(10) NOT NULL AUTO_INCREMENT,
     `availibility` BIT NOT NULL,
     `issued_to` varchar(255),
-    `issued_time` varchar(255),
-    `return_by` varchar(255),
+    `issued_time` TIMESTAMP,
+    `return_by` TIMESTAMP,
     PRIMARY KEY (`issue_id`)
 );
 
@@ -81,6 +81,22 @@ INSERT INTO `book` VALUES
 (12, 'The Hobbit', 'J. R. R. Tolkien', "A prequel to The Lord of the Rings", 300, 'Fantasy', 'https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg'),
 (13, 'The Design of Everyday Things', 'Don Norman', 'This book explores the complex interactions between humans and everyday objects', 368, 'Technical', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYD_w4aVsG2IymZQUpYqSsR6KpSScrXQhfh7jTSHAmqg&s'),
 (14, "Don't Make Me Think", 'Steve Krug', 'Guide to help understand the principles of intuitive design', 216, 'Technical', 'https://m.media-amazon.com/images/I/51sdCuqMwWL._AC_UF1000,1000_QL80_.jpg');
+
+INSERT INTO `book_issue` (`book_id`, `availibility`) VALUES
+(1,1),(1,1),(1,1),(1,1),(1,1),(1,1),(1,1),(1,1),(1,1),(1,1),
+(2,1),(2,1),(2,1),(2,1),(2,1),(2,1),(2,1),(2,1),(2,1),(2,1),
+(3,1),(3,1),(3,1),(3,1),(3,1),(3,1),(3,1),(3,1),(3,1),(3,1),
+(4,1),(4,1),(4,1),(4,1),(4,1),(4,1),(4,1),(4,1),(4,1),(4,1),
+(5,1),(5,1),(5,1),(5,1),(5,1),(5,1),(5,1),(5,1),(5,1),(5,1),
+(6,1),(6,1),(6,1),(6,1),(6,1),(6,1),(6,1),(6,1),(6,1),(6,1),
+(7,1),(7,1),(7,1),(7,1),(7,1),(7,1),(7,1),(7,1),(7,1),(7,1),
+(8,1),(8,1),(8,1),(8,1),(8,1),(8,1),(8,1),(8,1),(8,1),(8,1),
+(9,1),(9,1),(9,1),(9,1),(9,1),(9,1),(9,1),(9,1),(9,1),(9,1),
+(10,1),(10,1),(10,1),(10,1),(10,1),(10,1),(10,1),(10,1),(10,1),(10,1),
+(11,1),(11,1),(11,1),(11,1),(11,1),(11,1),(11,1),(11,1),(11,1),(11,1),
+(12,1),(12,1),(12,1),(12,1),(12,1),(12,1),(12,1),(12,1),(12,1),(12,1),
+(13,1),(13,1),(13,1),(13,1),(13,1),(13,1),(13,1),(13,1),(13,1),(13,1),
+(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1);
 
 COMMIT;
 
