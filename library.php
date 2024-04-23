@@ -6,7 +6,7 @@
 <html>
   <head>
 		<title>Dashboard</title>
-    <link href="style.css" type="text/css" rel="stylesheet"</link>
+    <link href="style.css" type="text/css" rel="stylesheet">
   </head>
 	<body>
     <h1 class="title">Virtual Library</h1>

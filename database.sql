@@ -53,10 +53,9 @@ CREATE TABLE IF NOT EXISTS `book_issue` (
 
 -- A table to store book requests
 CREATE TABLE IF NOT EXISTS `requests` (
-    `book_id` int(10) NOT NULL,
+    `request_id` INT AUTO_INCREMENT PRIMARY KEY,
     `book_author` VARCHAR(255) NOT NULL,
     `book_title` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`book_id`)
 );
 
 INSERT INTO `admin` (`admin_id`, `admin_email`, `admin_pwd`) VALUES
