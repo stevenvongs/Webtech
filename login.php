@@ -2,7 +2,7 @@
 <html>
   <head>
 		<title>Login</title>
-    <link href="style.css" type="text/css" rel="stylesheet"link>
+    <link href="style.css" type="text/css" rel="stylesheet"</link>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
@@ -56,7 +56,9 @@
         if ($result->num_rows > 0) {
             // User exists, authentication successful
             $authenticated = true;
-            header("Location: dashboard.html");
+            session_start();
+            $_SESSION['username'] = $email;
+            header("Location: dashboard.php");
         } else {
             // User does not exist or incorrect credentials
             $authenticated = false;

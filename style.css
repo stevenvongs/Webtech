@@ -115,5 +115,15 @@ td {
 }
 
 #drop:hover {
-    background-color: darkslateblue; /* Change this to the desired hover color */
-  }
+    background-color: darkslateblue;
+}
+
+.error {
+    background-color: mistyrose; 
+    color: lightcoral;
+    border: 1px solid lightpink;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 350px; 
+    border-radius: 5px;
+}

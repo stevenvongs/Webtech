@@ -22,10 +22,9 @@ CREATE TABLE IF NOT EXISTS `admin` (
 );
 
 CREATE TABLE IF NOT EXISTS `user_info` (
-  `user_id` int(10) NOT NULL,
-  `user_email` varchar(255) NOT NULL,
+  `user_id` INT AUTO_INCREMENT PRIMARY KEY,
+  `user_email` varchar(255) DEFAULT NULL,
   `user_pwd` varchar(255) NOT NULL,
-  PRIMARY KEY (`user_id`)
 );
 
 ALTER TABLE `user_info`
@@ -50,6 +49,14 @@ CREATE TABLE IF NOT EXISTS `book_issue` (
     `issued_time` varchar(255),
     `return_by` varchar(255),
     PRIMARY KEY (`issue_id`)
+);
+
+-- A table to store book requests
+CREATE TABLE IF NOT EXISTS `requests` (
+    `book_id` int(10) NOT NULL,
+    `book_author` VARCHAR(255) NOT NULL,
+    `book_title` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`book_id`)
 );
 
 INSERT INTO `admin` (`admin_id`, `admin_email`, `admin_pwd`) VALUES
