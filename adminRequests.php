@@ -1,3 +1,6 @@
+<?php
+    include 'checkLoggedAdmin.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>

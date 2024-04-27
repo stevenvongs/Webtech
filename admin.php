@@ -57,7 +57,7 @@
             $authenticated = true;
             session_start();
             $_SESSION['username'] = $email;
-            header("Location: dashboard.php");
+            header("Location: adminUsers.php");
         } else {
             // User does not exist or incorrect credentials
             $authenticated = false;
