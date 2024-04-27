@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 CREATE TABLE IF NOT EXISTS `user_info` (
   `user_id` INT AUTO_INCREMENT PRIMARY KEY,
   `user_email` varchar(255) DEFAULT NULL,
-  `user_pwd` varchar(255) NOT NULL,
+  `user_pwd` varchar(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `book` (
@@ -43,8 +43,8 @@ CREATE TABLE IF NOT EXISTS `book_issue` (
     `issue_id` int(10) NOT NULL AUTO_INCREMENT,
     `availibility` BIT NOT NULL,
     `issued_to` varchar(255),
-    `issued_time` TIMESTAMP,
-    `return_by` TIMESTAMP,
+    `issued_time` TIMESTAMP NULL,
+    `return_by` TIMESTAMP NULL,
     PRIMARY KEY (`issue_id`)
 );
 
