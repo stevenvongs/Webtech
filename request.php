@@ -18,7 +18,7 @@
         <li class="navBarListLog"><a class="navBarElement" href="library.php" target="_self">Log Out</a></li>
 	  </ul>
 
-    <div class="login">
+    <div class="login" style="margin-top: 30px;">
       <h2>Create A Book Request</h2>
       <form action="requestSubmit.php" method="post">
           <input type="text" name="bookAuthor" placeholder="Book Author" required>
