@@ -28,5 +28,45 @@
           <input type="submit" value="Login">
       </form>
     </div>
+
+      <!-- Print error if invalid login  -->
+    <?php if(isset($_GET['error']) && $_GET['error'] == 1): ?>
+      <p class="error">Invalid username or password. Please try again.</p>
+    <?php endif; ?>
+   
+    <?php
+    // Create connection
+    $conn = new mysqli("localhost", "root", "", "library_database");
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    // Get username and password from the form
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // get username and passwrod from form
+        $email = $_POST['username'];
+        $password = $_POST['password'];
+
+        // Process the form data (e.g., save to database, send email, etc.)
+        $sql = "SELECT * FROM admin WHERE admin_email ='$email' AND admin_pwd='$password'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // User exists, authentication successful
+            $authenticated = true;
+            session_start();
+            $_SESSION['username'] = $email;
+            header("Location: dashboard.php");
+        } else {
+            // User does not exist or incorrect credentials
+            $authenticated = false;
+            header("Location: admin.php?error=1");
+        }
+    }
+    // Close database connection
+    $conn->close();
+    ?>
+
   </body>
 </html>
