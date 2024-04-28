@@ -30,6 +30,7 @@ if ($result->num_rows > 0) {
         $bookGenre = $row["book_genre"];
         $bookImage = $row["book_image"];
         $available = $row["available"];
+        $bookId = $row["book_id"]; // Adding book ID
 
         // Display book as a card
         echo '<div class="bookCard">';
@@ -40,7 +41,9 @@ if ($result->num_rows > 0) {
         echo '<p class="bookGenre">'.$bookGenre.'</p>';
         echo '</div>'; 
         echo '<div class="availability">'.$available.' Available</div>';
+        echo '<div class="details"> <a href="singleBookInfo.php?book_id='.$bookId.'" class="btn">Details</a></div>';
         echo '</div>'; 
+
     }
 } else {
     echo "No books found";
