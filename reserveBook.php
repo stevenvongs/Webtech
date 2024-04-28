@@ -15,14 +15,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "UPDATE `book_issue` SET `issued_to` = '$username', `availibility` = 0, `issued_time` = CURRENT_TIMESTAMP, `return_by` = DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 7 DAY) WHERE `book_id` = $bookId  AND `availibility` = 1 LIMIT 1;";
+    $sql = "SELECT issue_id FROM book_issue WHERE book_id = $bookId AND availibility = 1 ORDER BY issue_id ASC LIMIT 1";
+    $result = $conn->query($sql);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Book Successfully reserved!";
-        exit;
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $issueId = $row["issue_id"];
+
+        // Reserve the book issue
+        $reserveSql = "UPDATE book_issue SET issued_to = '$username', availibility = 0, issued_time = CURRENT_TIMESTAMP, return_by = DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 7 DAY) WHERE issue_id = $issueId";
+        if ($conn->query($reserveSql) === TRUE) {
+            echo "Book Successfully reserved!";
+        } else {
+            echo "Error updating record: " . $conn->error;
+        }
     } else {
-        echo "Error updating record: " . $conn->error;
+        echo "No available book issues found for the given book ID.";
     }
+
     $conn->close();
 }
 ?>

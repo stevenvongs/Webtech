@@ -183,7 +183,7 @@ td {
     font-weight: 700;
     color:gray;
 }
-.availability {
+.availability, .returnBook {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -193,6 +193,7 @@ td {
     border-radius: 5px;
     font-size: 12px;
 }
+
 .details {
     position: absolute;
     bottom: 10px;
@@ -270,4 +271,12 @@ td {
 
 #availabilityButton1:hover {
     background-color: darkslateblue;
+}
+
+.returnBy {
+    font-weight: 500;
+    margin: 10px 0;
+    text-align: center;
+    color:black;
+
 }

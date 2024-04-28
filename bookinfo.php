@@ -1,9 +1,9 @@
 <?php
-// Establish database connection (assuming MySQL)
+// Establish database connection
 $servername = "localhost";
-$username = "root";  // Your MySQL username
-$password = "";      // Your MySQL password
-$database = "library_database"; // Your database name
+$username = "root";  
+$password = "";      
+$database = "library_database";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
