@@ -93,7 +93,7 @@
                     if($availabilityStatus ==  'checked-out') {
                         echo "<button id='availabilityButton' class='button' style ='background-color: lightgrey;'>Checked Out</button>";
                     } else if ($availabilityStatus ==  'not-available') {
-                        echo "<button id='availabilityButton' class='button'style ='background-color: darkslateblue;'>Unavailable</button>";
+                        echo "<button id='availabilityButton' class='button'style ='background-color: lightgrey;'>Unavailable</button>";
                     } else {
                         echo "<button id='availabilityButton1' class='button' onclick='reserveBook($bookId, \"$username\")'>Reserve</button>";
                     }                        
