@@ -47,12 +47,15 @@ $state->bind_param("ss", $email, $Vpassword);
 //Executes the method and tells user it is successful or not
 if ($state->execute()) {
     header("Location: createSuccess.html");
+    $mysqli->close();
     exit;
 } else {
     if ($mysqli->errno === 1062) {
         die("Email already taken");
+        $mysqli->close();
     }
     die($mysqli->error . " " . $mysqli->errno);
+    $mysqli->close();
 }
 
 
