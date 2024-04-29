@@ -43,7 +43,7 @@
         <li class="navBarListLog"><a class="navBarElement" href="logout.php" target="_self">Log Out</a></li>
 	</ul>
 
-    <!-- Table to display users -->
+<!-- Table to display users -->
     <table>
         <tr>
             <th>Request ID</th>
@@ -67,8 +67,8 @@
                 echo "</tr>";
             }
         }
-        $mysqli->close();
         ?>
-    </table>
+</div> <!-- Ensure this div closes after the table -->
+
 	</body>
 </html>

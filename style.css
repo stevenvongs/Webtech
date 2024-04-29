@@ -64,12 +64,21 @@ body {
 
 /* Tables */
 th {
-    background-color: pink;
+    background-color: slateblue;
     color: white;
 }
 
 td {
-        background-color: snow;
+        background-color: lightgray;
+}
+
+table {
+    flex-direction: column;
+    height: 10vh;
+    width: 100%;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Navigation Bar*/
