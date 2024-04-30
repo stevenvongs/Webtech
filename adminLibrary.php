@@ -83,7 +83,7 @@ $mysqli->close();
         <input type="submit" value="Remove Book">
     </form>
     <div class="bookContainer">
-        <?php include 'bookinfo.php'; ?>   
+        <?php include 'adminBookInfo.php'; ?>   
     </div>
 </body>
 </html>

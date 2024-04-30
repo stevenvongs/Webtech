@@ -17,7 +17,7 @@
             <input type="text" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="password" name="Vpassword" placeholder="Verify Password" required>
-            <input type="submit" value="Login">
+            <input type="submit" value="Sign up">
             <a href="login.php">Have an Account?!</a>
         </form>
     </div>
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $insert_stmt = $conn->prepare($insert_sql);
                 $insert_stmt->bind_param("ss", $email, $password);
                 if ($insert_stmt->execute()) {
-                    echo "New record created successfully";
+                    echo '<p class="success">Request Successful</p>';
                 } else {
                     echo '<div class="error">Error: ' . $insert_stmt->error . '</div>';
                 }
