@@ -26,7 +26,7 @@
           <input type="text" name="username" placeholder="Username" required>
           <input type="password" name="password" placeholder="Password" required>
           <input type="submit" value="Login">
-          <a href="create.html">Or create account</a>
+          <a href="create.php">Or create account</a>
       </form>
     </div>
 
