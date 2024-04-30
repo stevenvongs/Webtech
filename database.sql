@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `book_issue` (
 
 -- A table to store book requests
 CREATE TABLE IF NOT EXISTS `requests` (
-    `book_id` int(10) NOT NULL,
+    `book_id` int(10) NOT NULL AUTO_INCREMENT,
     `book_author` VARCHAR(255) NOT NULL,
     `book_title` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`book_id`)
@@ -99,7 +99,3 @@ INSERT INTO `book_issue` (`book_id`, `availibility`) VALUES
 (14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1);
 
 COMMIT;
-<<<<<<< HEAD
-
-=======
->>>>>>> taylor

@@ -1,7 +1,5 @@
 <?php
     include 'checkLoggedAdmin.php';
-<<<<<<< HEAD
-=======
     $host = "localhost";
     $dbname = "library_database";
     $username = "root";
@@ -28,36 +26,22 @@
     // Fetch all users to display
     $sql = "SELECT * FROM user_info";
     $result = $mysqli->query($sql);
->>>>>>> taylor
 ?>
 <!DOCTYPE html>
 <html>
   <head>
 		<title>Admin's Users</title>
-<<<<<<< HEAD
-    <link href="style.css" type="text/css" rel="stylesheet"</link>
-=======
     <link href="style.css" type="text/css" rel="stylesheet">
->>>>>>> taylor
   </head>
 	<body>
     <h1 class="title">Virtual Library</h1>
     <h2 class="welcome" style="padding: 0px;">Administrator</h2>
-<<<<<<< HEAD
-
-    <!-- This is my navigation bar. -->   
-    <ul class="navBar">
-  	    <li class="navBarList"><a class="navBarElement" href="adminLibrary.php" target="_self">Library</a></li>
-=======
     <ul class="navBar">
         <li class="navBarList"><a class="navBarElement" href="adminLibrary.php" target="_self">Library</a></li>
->>>>>>> taylor
         <li class="navBarList"><a class="navBarElement" href="adminRequests.php" target="_self">Requests</a></li>
         <li class="navBarList"><a class="navBarElement" href="adminUsers.php" target="_self">Users</a></li>
         <li class="navBarListLog"><a class="navBarElement" href="logout.php" target="_self">Log Out</a></li>
 	</ul>
-<<<<<<< HEAD
-=======
 
     <!-- Table to display users -->
     <table>
@@ -84,6 +68,5 @@
         $mysqli->close();
         ?>
     </table>
->>>>>>> taylor
 	</body>
 </html>

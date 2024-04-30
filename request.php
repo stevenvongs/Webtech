@@ -28,8 +28,4 @@
       </form>
     </div>
 	</body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> taylor
