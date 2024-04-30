@@ -139,6 +139,17 @@ table {
     border-radius: 5px;
 }
 
+.success {
+    background-color: lightgreen; 
+    color: green;
+    border: 1px solid lightgreen;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 350px; 
+    border-radius: 5px;
+    text-align: center;
+}
+
 
 .bookContainer {
     display: flex;

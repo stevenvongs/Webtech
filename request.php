@@ -27,8 +27,7 @@
           <a href="library.php">Check out Our Library</a>
       </form>
     </div>
-	</body>
-</html>
+
 
 <?php
 //Connect to database
@@ -48,26 +47,32 @@ if ($mysqli->connect_errno) {
     die("Connection error: " . $mysqli->connect_errno);
 }
 
-//Inserts a new account
+//Inserts a new request
 $sql = "INSERT INTO requests (book_author, book_title)
         VALUES (?, ?)";
 
-//state object while calling the database connection
 $state = $mysqli->stmt_init();
-
-//prepare for execution and passing in $sql as an argument
-//checks for SQL syntax
-$state = $mysqli->stmt_init();
-if (!$state->prepare($sql)) {
-    die("SQL preparation failed: " . $mysqli->error);
-}
-
-//passes the parameters, "ss" represents a string
+if ($state->prepare($sql)) {
+// Bind the parameters
 $state->bind_param("ss", $bookAuthor, $bookTitle);
 
-//Executes the method and tells user it is successful or not
+// Execute the statement
 if ($state->execute()) {
-    echo "Request Successful!";
+    echo '<p class="success">Request Successful</p>';
+} else {
+    echo '<p class="error">Request Failed: ' . $state->error . '</p>';
 }
+
+// Close the statement
+$state->close();
+} else {
+echo '<p class="error">SQL preparation failed: ' . $mysqli->error . '</p>';
+}
+
+// Close the database connection
+$mysqli->close();
 }
 ?>
+
+  </body>
+</html>
