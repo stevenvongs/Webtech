@@ -70,13 +70,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (strlen($password) < 8) {
                 echo '<div class="error">Password must be at least 8 Characters</div>';
             } else {
-                // Hash the password for security
-                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                 // Insert new user into the database using prepared statement
                 $insert_sql = "INSERT INTO user_info (user_email, user_pwd) VALUES (?, ?)";
                 $insert_stmt = $conn->prepare($insert_sql);
-                $insert_stmt->bind_param("ss", $email, $hashed_password);
+                $insert_stmt->bind_param("ss", $email, $password);
                 if ($insert_stmt->execute()) {
                     echo "New record created successfully";
                 } else {

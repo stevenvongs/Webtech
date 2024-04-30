@@ -20,7 +20,7 @@
 
     <div class="login" style="margin-top: 30px;">
       <h2>Create A Book Request</h2>
-      <form action="requestSubmit.php" method="post">
+      <form action="request.php" method="post">
           <input type="text" name="bookAuthor" placeholder="Book Author" required>
           <input type="text" name="bookTitle" placeholder="Book Title" required>
           <input type="submit" value="Request a Book!">
@@ -29,3 +29,45 @@
     </div>
 	</body>
 </html>
+
+<?php
+//Connect to database
+//Variables
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$host ="localhost";
+$dbname = "library_database";
+$username = "root";
+$password = "";
+$bookAuthor = $_POST["bookAuthor"];
+$bookTitle = $_POST["bookTitle"];
+//Database login
+$mysqli = new mysqli($host, $username, $password, $dbname);
+
+//Checks to see if there was an issue connecting to the database
+if ($mysqli->connect_errno) {
+    die("Connection error: " . $mysqli->connect_errno);
+}
+
+//Inserts a new account
+$sql = "INSERT INTO requests (book_author, book_title)
+        VALUES (?, ?)";
+
+//state object while calling the database connection
+$state = $mysqli->stmt_init();
+
+//prepare for execution and passing in $sql as an argument
+//checks for SQL syntax
+$state = $mysqli->stmt_init();
+if (!$state->prepare($sql)) {
+    die("SQL preparation failed: " . $mysqli->error);
+}
+
+//passes the parameters, "ss" represents a string
+$state->bind_param("ss", $bookAuthor, $bookTitle);
+
+//Executes the method and tells user it is successful or not
+if ($state->execute()) {
+    echo "Request Successful!";
+}
+}
+?>
