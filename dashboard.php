@@ -21,4 +21,8 @@
     <?php include 'dashboardinfo.php' ?>
   </div>
 	</body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> taylor

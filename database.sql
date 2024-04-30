@@ -99,4 +99,7 @@ INSERT INTO `book_issue` (`book_id`, `availibility`) VALUES
 (14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1),(14,1);
 
 COMMIT;
+<<<<<<< HEAD
 
+=======
+>>>>>>> taylor
