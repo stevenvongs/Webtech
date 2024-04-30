@@ -66,6 +66,7 @@ $mysqli->close();
         <li class="navBarListLog"><a class="navBarElement" href="logout.php" target="_self">Log Out</a></li>
     </ul>
 
+    <div class="login" style="margin-top: 50px">
     <h2>Add a Book:</h2>
     <form action="adminLibrary.php" method="post">
         <input type="text" name="title" placeholder="Title" required>
@@ -76,11 +77,13 @@ $mysqli->close();
         <input type="text" name="image" placeholder="Image (URL)" required>
         <input type="submit" value="Add Book">
     </form>
-
+    </div>
+    <div class="login" style="margin-top: 50px">
     <h2>Remove a Book by Title:</h2>
     <form action="adminLibrary.php" method="post">
         <input type="text" name="titleBook" placeholder="Title" required>
         <input type="submit" value="Remove Book">
+    </div>
     </form>
     <div class="bookContainer">
         <?php include 'adminBookInfo.php'; ?>   
